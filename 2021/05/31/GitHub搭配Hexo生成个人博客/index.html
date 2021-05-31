@@ -1,312 +1,322 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<!--Head-->
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="google-site-verification" content="GZh2jRE6IgVXx8SYpoRZYwcs4_Wy7vWEAeSIHCs3UE8"/>
-    <meta name="baidu-site-verification" content="5EmnBCPDrY" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
+    
+    
+    
+        <link rel="shortcut icon" href="/icons/favicon.ico">
     
 
-    <title>GitHub搭配Hexo生成个人博客 - 阿冒的仓库</title>
+    
+    
+        
+<link rel="stylesheet" href="/css/mdui.min.v1.0.0.css">
 
-    <meta property="og:url" content="http://example.com">
-    <meta property="og:type" content="blog">
-    <meta property="og:title" content="GitHub搭配Hexo生成个人博客 - 阿冒的仓库 | 阿冒的仓库">
+    
+    
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/iconfont.css">
+
+
     
     
 
     
-
-    <!--mdui-->
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
-          integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw"
-          crossorigin="anonymous"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
-            integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
-            crossorigin="anonymous">
-    </script>
-    <!--jquery-->
-    
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-
-
-    <!--https://github.com/Dreamer365/FunLazy-->
-    <script src="https://cdn.jsdelivr.net/npm/funlazy@latest"></script>
-
-    <!--theme-->
-    
-<link rel="stylesheet" href="/css/mdm.css">
-
-    
-<link rel="stylesheet" href="/css/mdm_theme_dark.css">
-
-    
-<script src="/js/mdm.js"></script>
-
-    
-    <!--高亮-->
-    
-<link rel="stylesheet" href="/css/solarized-light.css">
-
-    
-    <!--全局变灰-->
+        <script data-ad-client="ca-" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     
 
-    <!--点击特效-->
-    
-        <script async src="js/click-effect.js"></script>
-    
-
-    <!--代码块-->
-    
-<script src="/libs/codeblock/codeblock.js"></script>
-
-    
-<link rel="stylesheet" href="/libs/codeblock/codeblock.css">
 
 
-    <!--一言-->
-    <script defer src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto"></script>
 
 
-    <!--本地搜索-->
-    <!-- <script src="js/search.js"></script> -->
-    <!--自动提交给百度-->
-    
-    <script>
-        (function(){
-            var bp = document.createElement('script');
-            var curProtocol = window.location.protocol.split(':')[0];
-            if (curProtocol === 'https') {
-                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-            }
-            else {
-                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-            }
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(bp, s);
-        })();
-    </script>
-    
 
-    <!---google ad config-->
+
+
+
+
+
+
+          
+
+
     
-        <script data-ad-client="ca-pub-8181303774570877" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+    <title>
+        
+            GitHub搭配Hexo生成个人博客 | 阿冒的仓库
+        
+    </title>
+    
     
 <meta name="generator" content="Hexo 5.4.0"></head>
-<!--header_bar-->
-<div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
-    <div class="mdui-toolbar mdui-color-indigo">  
-        <a class="mdui-btn mdui-btn-icon mdui-hidden-sm-up" mdui-menu="{target: '#example-2'}">
-            <i class="mdui-icon material-icons">menu</i>
-        </a>
-        <ul class="mdui-menu" id="example-2">
-            
-                <li class="mdui-menu-item">
-                <a href="/" class="mdui-ripple">
-                    <i class="mdui-menu-item-icon mdui-icon material-icons">home</i>
-                    首页
-                </a>
-                </li>
-                <li class="mdui-divider"></li>
-            
-                <li class="mdui-menu-item">
-                <a href="/home" class="mdui-ripple">
-                    <i class="mdui-menu-item-icon mdui-icon material-icons">desktop_windows</i>
-                    桌面
-                </a>
-                </li>
-                <li class="mdui-divider"></li>
-            
-                <li class="mdui-menu-item">
-                <a href="/tags" class="mdui-ripple">
-                    <i class="mdui-menu-item-icon mdui-icon material-icons">local_offer</i>
-                    标签
-                </a>
-                </li>
-                <li class="mdui-divider"></li>
-            
-                <li class="mdui-menu-item">
-                <a href="/archives" class="mdui-ripple">
-                    <i class="mdui-menu-item-icon mdui-icon material-icons">library_books</i>
-                    归档
-                </a>
-                </li>
-                <li class="mdui-divider"></li>
-            
-                <li class="mdui-menu-item">
-                <a href="/about" class="mdui-ripple">
-                    <i class="mdui-menu-item-icon mdui-icon material-icons">error_outline</i>
-                    关于
-                </a>
-                </li>
-                <li class="mdui-divider"></li>
-            
-        </ul>
-        <!--大屏-->
-        
-            <a href="/" class="mdui-typo-title mdui-ripple mdui-ripple-white mdui-hidden-xs">
-                首页
-            </a>
-        
-            <a href="/home" class="mdui-typo-title mdui-ripple mdui-ripple-white mdui-hidden-xs">
-                桌面
-            </a>
-        
-            <a href="/tags" class="mdui-typo-title mdui-ripple mdui-ripple-white mdui-hidden-xs">
-                标签
-            </a>
-        
-            <a href="/archives" class="mdui-typo-title mdui-ripple mdui-ripple-white mdui-hidden-xs">
-                归档
-            </a>
-        
-            <a href="/about" class="mdui-typo-title mdui-ripple mdui-ripple-white mdui-hidden-xs">
-                关于
-            </a>
-        
-        <div class="mdui-toolbar-spacer"></div>
-
-        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>
-
-        <!--分享-->
-        
-        <button class="mdui-btn mdui-btn-icon" mdui-menu="{target: '#share_menu'}">
-            <i class="mdui-icon material-icons">share</i>
-        </button>
-        
-        <ul class="mdui-menu" id="share_menu">
-            
-                <li class="mdui-menu-item">
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com//2021/05/31/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html" target="_blank" class="mdui-ripple">
-                        facebook
-                    </a>
-                </li>
-            
-            
-            
-                <li class="mdui-menu-item">
-                    <a href="http://connect.qq.com/widget/shareqq/index.html?site=阿冒的仓库&title=GitHub搭配Hexo生成个人博客&summary=&pics=http://example.com/favicon.ico&url=http://example.com/2021/05/31/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html" target="_blank" class="mdui-ripple">
-                        QQ
-                    </a>
-                </li>
-            
-
-            
-                <li class="mdui-menu-item">
-                    <a href="https://twitter.com/intent/tweet?text=GitHub搭配Hexo生成个人博客&url=http://example.com//2021/05/31/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html&via=xidicunmin" target="_blank" class="mdui-ripple">
-                        twitter
-                    </a>
-                </li>
-            
-        
-            
-                <li class="mdui-menu-item">
-                    <a href="http://service.weibo.com/share.php?appkey=&title=GitHub搭配Hexo生成个人博客&url=http://example.com//2021/05/31/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html&pic=&searchPic=false&style=simple" target="_blank" class="mdui-ripple">
-                        weibo
-                    </a>
-                </li>
-            
-
-            
-                <li class="mdui-menu-item">
-                    <a href="https://telegram.me/share/url?url=http://example.com//2021/05/31/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html&text=GitHub搭配Hexo生成个人博客" target="_blank" class="mdui-ripple">
-                        telegram
-                    </a>
-                </li>
-            
-
-            
-                <li class="mdui-menu-item">
-                    <a href="https://plus.google.com/share?url=http://example.com//2021/05/31/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html" target="_blank" class="mdui-ripple">
-                        googleplus
-                    </a>
-                </li>
-              
-        
-              
-                <li class="mdui-menu-item">
-                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://example.com//2021/05/31/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html&title=GitHub搭配Hexo生成个人博客" target="_blank" class="mdui-ripple">
-                        linkedin
-                    </a>
-                </li>
-              
-            </ul>
-        
-        
-        <button onclick="themeChange()"
-            class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-white" 
-            mdui-tooltip="{content: '切换亮/暗色模式'}">
-            <i class="mdui-icon material-icons" id="themeIcon">brightness_7</i>
-        </button>
-        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">more_vert</i></a>
-    </div>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
+  
+  <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
+    <a href="/" class="mdui-typo-headline">阿冒的仓库</a>
+    <a href="/" class="header-subtitle mdui-typo-headline"></a>
+    <div class="mdui-toolbar-spacer"></div>
+    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
   </div>
-<!--Header-->
+</header>
 
-
-<div class="header" style="background-image: url(https://cdn.jsdelivr.net/gh/TonyChenn/BlogPicture/main/img1.jpg)">
-    <div class="mdui-card-media" style="overflow: hidden;">
-        <div class="header-content">
-            <span class="header_title">GitHub搭配Hexo生成个人博客</span></br>
-            <p id="hitokoto">一言加载中...</p>
-        </div>
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
     </div>
+    <div class="search-result" data-resource="/search.xml"></div>
+  
 </div>
 
-<div class="mdui-center article-section" id="content-inner">
-  <!--博文详细内容-->
-<div class="">
+  <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">站点概览</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">关于</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-1">
+        <div class="mdui-list">
+            
+                
+                <a href="/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-home"></i>
+                    </div>
+                    <div class="mdui-list-item-content">主页</div>
+                </a>
+            
+                
+                <a href="/tags/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-bookmark"></i>
+                    </div>
+                    <div class="mdui-list-item-content">标签</div>
+                </a>
+            
+                
+                <a href="/categories/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-folder"></i>
+                    </div>
+                    <div class="mdui-list-item-content">分类</div>
+                </a>
+            
+                
+                <a href="/archives/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-archive"></i>
+                    </div>
+                    <div class="mdui-list-item-content">归档</div>
+                </a>
+            
+                
+                <a href="/tools/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-tools"></i>
+                    </div>
+                    <div class="mdui-list-item-content">工具箱</div>
+                </a>
+            
+                
+                <a href="/about/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-user"></i>
+                    </div>
+                    <div class="mdui-list-item-content">关于</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-icon">
+                    <i class="iconfont icon-moon"></i>
+                </div>
+                <div class="mdui-list-item-content">夜间模式</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-1">
+        <div class="sidebar-overview">
+            <div class="sidebar-avatar">
+                
+                    <img src="/icons/avatar.gif"/>
+                
+            </div>
+            <div class="sidebar-author-name">xidicunmin</div>
+            <div class="sidebar-description"></div>
+        </div>
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
+                    <a href="mailto:xxx@xxx.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
+                    <a target="_blank" rel="noopener" href="https://your.url" class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-steam"></i></span>
+                    <a target="_blank" rel="noopener" href="https://your.url" class="mdui-chip-title">Steam</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-weibo"></i></span>
+                    <a target="_blank" rel="noopener" href="https://your.url" class="mdui-chip-title">Weibo</a>
+                </div>
+            
+        </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">友情链接</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul id="linksList" class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                        <a target="_blank" rel="noopener" href="https://garybear.cn/hexo-theme-meadow/" class="mdui-list-item mdui-ripple">
+                            Meadow说明文档
+                        </a>
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+</aside>
   
-<link rel="stylesheet" href="/css/post.css">
+  <main id="main-contain" class="mdui-container mdui-m-t-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
+  <header class="mdui-card-media">
+    
+    
+      <div class="post-header"> 
+  <a class="post-header-title" href="/2021/05/31/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">GitHub搭配Hexo生成个人博客</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      发布于:&nbsp;2021-05-31
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      更新于:&nbsp;2021-05-31
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      分类于:&nbsp;
+    </span>
+    
+      <span>
+        <span class="iconfont icon-eye"></span>
+        阅读次数:&nbsp;
+        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+      </span>
+    
+  </div>
+</div>   
+    
 
 
-  <div class="article article-bg mdui-center mdui-shadow-2">
-    <div class="article-info">
-      <!--文章内容广告-->
-      
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8181303774570877"
-     data-ad-slot="4472209190"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-      
-      
-      <h3 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h3><ol>
+
+    
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=GitHub搭配Hexo生成个人博客&url=http://example.com/2021/05/31/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&pic=http://example.com/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=GitHub搭配Hexo生成个人博客&url=http://example.com/2021/05/31/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&via=xidicunmin" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2021/05/31/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=http://example.com/2021/05/31/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://example.com/2021/05/31/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title=GitHub搭配Hexo生成个人博客" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=阿冒的仓库&title=GitHub搭配Hexo生成个人博客&summary=&pics=http://example.com/null&url=http://example.com/2021/05/31/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=http://example.com/2021/05/31/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&text=GitHub搭配Hexo生成个人博客" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+  
+  
+  
+  
+  
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
+    <h3 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h3><ol>
 <li><strong>github账号</strong></li>
 <li><strong>git环境</strong></li>
 <li><strong>node.js环境</strong></li>
 </ol>
 <h3 id="二、新建博客仓库"><a href="#二、新建博客仓库" class="headerlink" title="二、新建博客仓库"></a>二、新建博客仓库</h3><ol>
 <li><strong>登录GitHub账号</strong></li>
-<li><strong>新建名称为“账号名称”.github.io的仓库</strong><img src="attachment:daadb5ef8815c4ec612f0450d9a827e5" alt="截图"><img src="attachment:6f52ab4297df08edd32239f2d0243b35" alt="截图">如果新建仓库时有勾选Add a README file，那么直接通过浏览器访问<a target="_blank" rel="noopener" href="https://xidicunmin.github.io/">xidicunmin.github.io</a>可以直接访问个人主页，显示的是REAADME内的信息。</li>
+<li><strong>新建名称为“账号名称”.github.io的仓库</strong><img src="/.com//newRepository.png" alt="新建仓库"><img src="/.com//repositoryContext.png" alt="仓库信息">如果新建仓库时有勾选Add a README file，那么直接通过浏览器访问<a target="_blank" rel="noopener" href="https://xidicunmin.github.io/">xidicunmin.github.io</a>可以直接访问个人主页，显示的是REAADME内的信息。</li>
 </ol>
 <h3 id="三、安装"><a href="#三、安装" class="headerlink" title="三、安装"></a>三、安装</h3><ol>
 <li><strong>安装hexo</strong>在希望生成hexo项目的目录下右击，选择git bash进入git命令行。输入下面指令进行安装：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br></pre></td></tr></table></figure>
 
 安装完毕后可以输入下面指令确保hexo已安装：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
 
-出现下图信息说明hexo已经成功安装：<img src="attachment:7fc39e043d92e7a44b19d96606212a58" alt="截图"></li>
+出现下图信息说明hexo已经成功安装：<img src="/.com//hexo-v.png" alt="hexo -v"></li>
 <li><strong>初始化项目</strong>使用以下命令新建一个项目：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init hexotest</span><br></pre></td></tr></table></figure>
 
-<img src="attachment:f7f0425c64037ba785bb8dad37309376" alt="截图">hexotest可替换为任意项目名称，此次为范例。成功后目录下会出现该项目文件夹：<img src="attachment:b195d240cdcb2556697b8e0e941fa3b7" alt="截图"></li>
+<img src="/.com//hexoinit.png" alt="hexo init">hexotest可替换为任意项目名称，此次为范例。成功后目录下会出现该项目文件夹：<img src="/.com//projectName.png" alt="自动生成文件夹"></li>
 <li><strong>编译项目</strong>进入项目文件夹内打开git命令行，或者也可以在当前命令行窗口输入下面指令直接进入项目文件夹内：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd hexotest</span><br></pre></td></tr></table></figure>
 
 确保当前命令行为项目文件夹内后，输入下面命令进行编译：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure></li>
 <li><strong>本地运行</strong>输入以下指令，可以开启本地服务：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
-<img src="attachment:4c6eff0ddc05c2b407e0504637c004c6" alt="截图">（注意：复制访问地址时采用ctrl+c会导致本地服务结束)在浏览器输入访问<a target="_blank" rel="noopener" href="https://localhost:4000/">地址</a>，便可以打开项目默认主页：<img src="attachment:1107227dc320a029a012f86d4da30238" alt="截图"></li>
+<img src="/.com//hexos.png" alt="hexo s">（注意：复制访问地址时采用ctrl+c会导致本地服务结束)在浏览器输入访问<a target="_blank" rel="noopener" href="https://localhost:4000/">地址</a>，便可以打开项目默认主页：<img src="/.com//localPage.png" alt="本地预览"></li>
 </ol>
 <h3 id="四、部署"><a href="#四、部署" class="headerlink" title="四、部署"></a>四、部署</h3><ol>
-<li><strong>修改配置文件</strong>hexo项目的配置文件为项目根目录下的_config.yml，项目的基本配置主要存放在这个文件中，可以用notepad或者记事本打开：<img src="attachment:f062d0f6f349d8244f31a87964a7203d" alt="截图">这次主要修改的部分是部署相关，目的是部署到github上。可以从配置文件中找寻到以下配置信息：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: &#x27;&#x27;</span><br></pre></td></tr></table></figure>
+<li><strong>修改配置文件</strong>hexo项目的配置文件为项目根目录下的_config.yml，项目的基本配置主要存放在这个文件中，可以用notepad或者记事本打开：<img src="/.com//config.png" alt="配置文件">这次主要修改的部分是部署相关，目的是部署到github上。可以从配置文件中找寻到以下配置信息：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: &#x27;&#x27;</span><br></pre></td></tr></table></figure>
 
 根据前面设置好的GitHub仓库地址以及分支名称，按照以下格式进行增改，主要替换地址即可：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:xidicunmin/xidicunmin.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
 
@@ -318,98 +328,147 @@
 
 部署完，在GitHub仓库里可以看到和本地项目一样的内容。</li>
 </ol>
-<h3 id="五、访问"><a href="#五、访问" class="headerlink" title="五、访问"></a>五、访问</h3><pre><code>    部署完成后，这是再次访问GitHub主页[xidicunmin.github.io](https://xidicunmin.github.io)出现的就不是README内容，而是hexo主页。
-</code></pre>
+<h3 id="五、访问"><a href="#五、访问" class="headerlink" title="五、访问"></a>五、访问</h3><p>   部署完成后，这是再次访问GitHub主页<a target="_blank" rel="noopener" href="https://xidicunmin.github.io/">xidicunmin.github.io</a>出现的就不是README内容，而是hexo主页。</p>
 
-      
-    <div class="mdui-container">
-        <button class="mdui-center mdui-color-pink mdui-btn-icon mdui-btn mdui-btn-raised mdui-ripple"
-            mdui-dialog="{target: '#reward-dialog'}">赏</button>
-        <div class="mdui-dialog" id="reward-dialog">
-            <div class="reward-title">写博客不易，请我喝杯咖啡？ </div>
-            <div class="mdui-divider"></div>
-            <div class="mdui-tab mdui-tab-full-width" id="reward-tab">
-                <a href="#reward-alipay" class="mdui-ripple">支付宝</a>
-                <a href="#reward-wechat" class="mdui-ripple">微信</a>
-            </div>
-            <div id="reward-alipay">
-                <img src="https://cdn.jsdelivr.net/gh/TonyChenn/BlogPicture/main/alipay.jpg" class="mdui-center noclick">
-            </div>
-            <div id="reward-wechat">
-                <img src="https://cdn.jsdelivr.net/gh/TonyChenn/BlogPicture/main/wechat.jpg" class="mdui-center noclick">
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript">
-        var tab = new mdui.Tab('#reward-tab');
-        mdui.$('#reward-dialog').on('open.mdui.dialog', function () {
-        tab.handleUpdate();
-        });
-    </script>
+  </div>
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
+  
+  <!--页脚广告-->
+  
+  <div class="mdui-divider"></div>
+  
+  <nav>
+    
+    
+  </nav>
+</article>
 
 
-    </div>
+
+
+  <div class="toc-button"  style="z-index: 100;">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/2021/05/31/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" id="toc-header" class="mdui-ripple">文章目录</a>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text">一、准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%96%B0%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%BB%93%E5%BA%93"><span class="toc-number">2.</span> <span class="toc-text">二、新建博客仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AE%89%E8%A3%85"><span class="toc-number">3.</span> <span class="toc-text">三、安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E9%83%A8%E7%BD%B2"><span class="toc-number">4.</span> <span class="toc-text">四、部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E8%AE%BF%E9%97%AE"><span class="toc-number">5.</span> <span class="toc-text">五、访问</span></a></li></ol>
+      </li>
+    </ul>
   </div>
 
+
+
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+      <div class="mdui-tab" mdui-tab>
+        
+          <a href="#comment-tab0" class="mdui-ripple">gitalk</a>
+        
+          <a href="#comment-tab1" class="mdui-ripple">livere</a>
+        
+      </div>
+      
+        <div id="comment-tab0" class="mdui-p-a-2">
+          <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id:  md5(location.pathname) ,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+        </div>
+      
+        <div id="comment-tab1" class="mdui-p-a-2">
+          <div id="lv-container" data-id="city" data-uid="">
+  <script type="text/javascript">
+    (function (d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
+  <noscript>Please enable JavaScript to view the comments powered by LiveRe.</noscript>
+</div>
+        </div>
+      
+    </div>
+
+  </main>
+  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="mdui-container">
+    <div class="mdui-row">
+      
+        <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank"></a>
+      
+      <span>
+        &copy; 2015 - 2021 
+        
+          <span style="color:#d9333f" class="iconfont icon-heart"></span>
+        
+        xidicunmin
+      </span>
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
+        </div>
+      
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>总访客量 <span id="busuanzi_value_site_uv"></span></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>总访问量 <span id="busuanzi_value_site_pv"></span></span>
+        </div>
+      
+    </div>
+ </div>
+</footer>
+  
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
+  
   
 
-
-	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-	<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.13.0/js/md5.min.js"></script>
-
-	<div class="article article-bg talk-info mdui-center mdui-shadow-2">
-		<h2>评论</h2>
-		<div id="gitalk-container"></div>
-	</div>
-
-  	<script type="text/javascript">
-		const gitalk = new Gitalk({
-			clientID: 'ecbf6316c9aa7a6bfd7a',
-			clientSecret: '5c875e5986ed75f4509d97acd16628b97f7506f1',
-			repo: 'tonychenn.github.io',
-			owner: 'tonychenn',
-			admin: ['tonychenn'],
-			id: md5(window.location.pathname),      // Ensure uniqueness and length less than 50 ，so use md5
-			distractionFreeMode: true  // Facebook-like distraction free mode
-		})
-		gitalk.render('gitalk-container')
-	</script>
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
-  <!-- <aside id="sidebar" class="mdui-shadow-2 mdui-hoverable">
-    <div class="widget">
-      <h3 class="title">目录</h3>
-      <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%80%E3%80%81%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="post-toc-text">一、准备工作</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BA%8C%E3%80%81%E6%96%B0%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%BB%93%E5%BA%93"><span class="post-toc-text">二、新建博客仓库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%89%E3%80%81%E5%AE%89%E8%A3%85"><span class="post-toc-text">三、安装</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%9B%9B%E3%80%81%E9%83%A8%E7%BD%B2"><span class="post-toc-text">四、部署</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BA%94%E3%80%81%E8%AE%BF%E9%97%AE"><span class="post-toc-text">五、访问</span></a></li></ol> 
-    </div>
-  </aside> -->
-</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
 
 
-  <!--footer-->
-  <footer class="mdui-color-indigo">
-    <div class="mdui-container">
-        <div style="text-align: center; padding: 20px;">
-            <div >
-                Copyright &copy;
-                xidicunmin&nbsp&nbsp2021
-                &nbspTheme By
-                <a target="_blank" rel="noopener" href="https://github.com/TonyChenn/hexo-theme-mdm">mdm</a>
-                <iframe style="margin-left: 2px; margin-bottom:-5px;" 
-                        src="https://ghbtns.com/github-btn.html?user=TonyChenn&repo=hexo-theme-mdm&type=star&count=true" 
-                        frameborder="0" scrolling="0" width="91px" height="20px">
-                </iframe>
-            </div>
-        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-        总访问量 <span id="busuanzi_value_site_pv"></span> 次&nbsp&nbsp&nbsp总访客<span id="busuanzi_value_site_uv"></span>人
-        </div>
-    </div>
-</footer>
-</div>
 
-<!--goTop-->
-<div class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-pink">
-    <i class="mdui-icon material-icons">arrow_upward</i>
-</div>
-</html>
+
+    
+<script src="/js/mdui.min.v1.0.0.js"></script>
+
+
+
+
+<script src="/js/meadow.js"></script>
+
+</body>
+</html >
