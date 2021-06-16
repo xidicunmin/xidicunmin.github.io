@@ -1,7 +1,7 @@
 ---
 title: Basler相机硬件触发设置
 date: 2021-06-02 19:13:02
-updated: 2021-06-03 20:20:00
+updated: 2021-06-16 14:50:00
 categories:
 - 工业相机
 - Basler
@@ -19,7 +19,7 @@ tags:
 
 另外pin4为输出io，如果有需要的话可以通过软件设置什么时间点输出io。
 
-供电接线示意图未下：
+io触发接线示意图如下：
 
 ![Basler相机接线图.png](https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.3/博客图片/Basler/Basler相机接线图.png)
 
@@ -30,6 +30,12 @@ tags:
 ![Basler相机接线图3.png](https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/博客图片/Basler/Basler相机接线图3.png)
 
 如图所示，如果使用12v作为外触发电压，需要串联1k电阻，如果使用24v电压，则需要串联2k电阻。如果未串联电阻，可能会出现触发异常的情况。
+
+io输出接线图如下：
+
+![Basler相机io输出接线图.png](https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.5/博客图片/Basler/Basler相机io输出接线图.png)
+
+如图所示，接线实际为闭环电路，io未输出时线路未闭合，当io输出时线路闭合，图中所示的led灯泡随之点亮。
 
 ## 相机配置
 
