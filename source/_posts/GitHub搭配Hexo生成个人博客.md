@@ -1,13 +1,14 @@
 ---
 title: GitHub搭配Hexo生成个人博客
 date: 2021-05-31 09:42:19
+top: 1
 categories:
 - 搭建博客
 - hexo
 tags:
 - hexo
+- 置顶
 photos: https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.1/博客图片/GitHub搭配Hexo生成个人博客/本地主页.png
-top: true
 ---
 通过GitHub和Hexo来搭建自己的第一个博客吧！
 <!--more-->

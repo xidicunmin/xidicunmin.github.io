@@ -1,5 +1,5 @@
 #####
-avatar: 
+avatar: https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.6/头像/小时候.jpg
 favicon: 
 preload: true #字体预加载
 excerpt_length: 300 #自动生成的摘要长度 建议文章中手动使用 <!--more--> 效果更佳  
@@ -8,7 +8,7 @@ mourn_mode: false #哀悼模式
 
 # 主题颜色
 theme_color:
-  primary: teal 
+  primary: indigo 
   accent: blue
 
 # 搜索
@@ -30,7 +30,7 @@ google_adsense:
 #####文章#####
 # 文末结束语
 passage_end_tag:
-  enabled: true
+  enabled: false
   text: --- 本文结束 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End ---
 
 # 数学公式渲染
@@ -66,23 +66,23 @@ menu:
 
 # 社交链接
 social:
-  E-Mail: mailto:xxx@xxx.com || icon-mail
-  GitHub: https://your.url || icon-github
-  Steam: https://your.url || icon-steam
-  Weibo: https://your.url || icon-weibo
+  E-Mail: mailto:redwangshifu@sina.com || icon-mail
+  GitHub: https://github.com/xidicunmin || icon-github
+  #Steam: https://your.url || icon-steam
+  Weibo: https://weibo.com/wsz19950816 || icon-weibo
   # 此外还预置了以下社交图标，可直接仿照格式进行引用，如需其他图标请自行添加图标库或与我联系
   # icon-twitter、icon-facebook、icon-vk、icon-stack-overflow、icon-youtube、icon-Instagram、icon-skype
   # icon-qq、icon-wechat、icon-alipay、icon-paypal、icon-telegram、icon-twitch、icon-discord
 
 #友情链接
 links:
-  Meadow说明文档: https://garybear.cn/hexo-theme-meadow/
+  #Meadow说明文档: https://garybear.cn/hexo-theme-meadow/
 ##########
 
 #####页脚#####
 # 页脚
 footer:
-  since: 2015
+  since: 2021
   powered: true
   theme: true
   beian:
