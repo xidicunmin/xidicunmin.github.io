@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>GitHub搭配Hexo生成个人博客</title>
+    <url>/2021/05/31/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<p>通过GitHub和Hexo来搭建自己的第一个博客吧！</p>
+<span id="more"></span>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a><strong>准备工作</strong></h2><h3 id="github账号"><a href="#github账号" class="headerlink" title="github账号"></a>github账号</h3><h3 id="git环境"><a href="#git环境" class="headerlink" title="git环境"></a>git环境</h3><h3 id="node-js环境"><a href="#node-js环境" class="headerlink" title="node.js环境"></a>node.js环境</h3><h2 id="新建博客仓库"><a href="#新建博客仓库" class="headerlink" title="新建博客仓库"></a><strong>新建博客仓库</strong></h2><h3 id="登录GitHub账号"><a href="#登录GitHub账号" class="headerlink" title="登录GitHub账号"></a>登录GitHub账号</h3><h3 id="新建GitHub仓库"><a href="#新建GitHub仓库" class="headerlink" title="新建GitHub仓库"></a>新建GitHub仓库</h3><p>仓库名称格式为<strong>“账号名称”+.github.io</strong>，如下图所示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.1/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93.png" alt="newRepository.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.1/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E4%BB%93%E5%BA%93%E4%BF%A1%E6%81%AF.png" alt="repositoryContext.png"></p>
+<p>如果新建仓库时有勾选Add a README file，那么直接通过浏览器访问<a href="https://xidicunmin.github.io/">xidicunmin.github.io</a>可以直接访问个人主页，显示的是REAADME内的信息。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a><strong>安装</strong></h2><h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>在希望生成hexo项目的目录下右击，选择git bash进入git命令行。输入下面指令进行安装：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo -g</span><br></pre></td></tr></table></figure>
+
+<p>安装完毕后可以输入下面指令确保hexo已安装：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+
+<p>出现下图信息说明hexo已经成功安装：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.1/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/hexo%E7%89%88%E6%9C%AC%E4%BF%A1%E6%81%AF.png" alt="hexo-v.png"></p>
+<h3 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h3><p>使用以下命令新建一个项目：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init hexotest</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.1/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE.png" alt="hexoinit.png"></p>
+<p>hexotest可替换为任意项目名称，此次为范例。</p>
+<p>成功后目录下会出现该项目文件夹：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.1/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E5%A4%B9%E5%90%8D%E7%A7%B0.png" alt="projectName.png"></p>
+<h3 id="编译项目"><a href="#编译项目" class="headerlink" title="编译项目"></a>编译项目</h3><p>进入项目文件夹内打开git命令行，或者也可以在当前命令行窗口输入下面指令直接进入项目文件夹内：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd hexotest</span><br></pre></td></tr></table></figure>
+
+<p>确保当前命令行为项目文件夹内后，输入下面命令进行编译：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<h3 id="本地运行"><a href="#本地运行" class="headerlink" title="本地运行"></a>本地运行</h3><p>输入以下指令，可以开启本地服务：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.1/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E5%BC%80%E5%90%AF%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1.png" alt="hexos.png"></p>
+<p>（注意：复制访问地址时采用ctrl+c会导致本地服务结束)</p>
+<p>在浏览器输入访问<a href="https://localhost:4000/">地址</a>，便可以打开项目默认主页：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.1/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E6%9C%AC%E5%9C%B0%E4%B8%BB%E9%A1%B5.png" alt="localPage.png"></p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a><strong>部署</strong></h2><h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><p>hexo项目的配置文件为项目根目录下的_config.yml，项目的基本配置主要存放在这个文件中，可以用notepad或者记事本打开：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.1/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%90%8D%E7%A7%B0.png" alt="config.png"></p>
+<p>这次主要修改的部分是部署相关，目的是部署到github上。可以从配置文件中找寻到以下配置信息：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: &#x27;&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>根据前面设置好的GitHub仓库地址以及分支名称，按照以下格式进行增改，主要替换地址即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:xidicunmin/xidicunmin.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+
+<p>需要注意格式问题，分支名称最好直接是仓库主分支。</p>
+<h3 id="安装部署插件"><a href="#安装部署插件" class="headerlink" title="安装部署插件"></a>安装部署插件</h3><p>使用部署命令前，需要先执行下面指令安装部署插件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">名称npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>如果未安装部署插件，可能会出现以下提示：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Deployer not found: git</span><br></pre></td></tr></table></figure>
+
+<h3 id="执行部署命令"><a href="#执行部署命令" class="headerlink" title="执行部署命令"></a>执行部署命令</h3><p>使用下面指令就可以把本地项目部署到github上：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>部署完，在GitHub仓库里可以看到和本地项目一样的内容。</p>
+<h2 id="访问"><a href="#访问" class="headerlink" title="访问"></a><strong>访问</strong></h2><p>部署完成后，这是再次访问GitHub主页<a href="https://xidicunmin.github.io/">xidicunmin.github.io</a>出现的就不是README内容，而是hexo主页。</p>
+]]></content>
+      <categories>
+        <category>搭建博客</category>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>置顶</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>jsDelivr+Github搭建个人免费CDN</title>
+    <url>/2021/08/15/jsDelivr+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%85%8D%E8%B4%B9CDN/</url>
+    <content><![CDATA[<p>CDN的全称是Content Delivery Network，中文翻译过来为内容分发网络。主要原理是依靠部署在各地的服务器，通过中心平台的调度，使得用户能够就近获取所需内容，降低网络拥堵，提高访问速度。详情可以自行搜索。</p>
+<p>通过jsDelivr提供的CDN服务，我们可以在网络上快速访问Github上托管的内容。那么也就说明我们可以在GitHub上建个仓库，用于存放类似于博客图片之内的内容，再通过jsDelivr进行获取，提高博客整体加载速度，那么接下来看看具体怎么实现。</p>
+<span id="more"></span>
+
+<h3 id="新建CDN仓库"><a href="#新建CDN仓库" class="headerlink" title="新建CDN仓库"></a>新建CDN仓库</h3><p>首先需要新建一个仓库用来存放资源，至于叫什么名称都是可以。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/jsDelivr+Github%E5%85%8D%E8%B4%B9%E5%88%9B%E5%BB%BA%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90%E5%BA%93/%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93.png" alt="新建仓库.png"></p>
+<h3 id="克隆仓库到本地"><a href="#克隆仓库到本地" class="headerlink" title="克隆仓库到本地"></a>克隆仓库到本地</h3><p>通过<strong>git clone</strong>指令把CDN仓库克隆到本地。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/jsDelivr+Github%E5%85%8D%E8%B4%B9%E5%88%9B%E5%BB%BA%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90%E5%BA%93/%E4%B8%8B%E6%8B%89%E6%9C%AC%E5%9C%B0.png" alt="下拉本地.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/jsDelivr+Github%E5%85%8D%E8%B4%B9%E5%88%9B%E5%BB%BA%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90%E5%BA%93/%E4%B8%8B%E6%8B%89%E6%8C%87%E4%BB%A4.png" alt="下拉指令.png"></p>
+<h3 id="上传资源"><a href="#上传资源" class="headerlink" title="上传资源"></a>上传资源</h3><p>把资源放入仓库并上传到GitHub。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/jsDelivr+Github%E5%85%8D%E8%B4%B9%E5%88%9B%E5%BB%BA%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90%E5%BA%93/%E6%8F%90%E4%BA%A4%E6%9C%AC%E5%9C%B0%E8%B5%84%E6%BA%90%E6%8C%87%E4%BB%A4.png" alt="提交本地资源指令.png"></p>
+<h3 id="发布仓库"><a href="#发布仓库" class="headerlink" title="发布仓库"></a>发布仓库</h3><p>在GitHub仓库主页上进行Release版本发布。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/jsDelivr+Github%E5%85%8D%E8%B4%B9%E5%88%9B%E5%BB%BA%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90%E5%BA%93/%E7%82%B9%E5%87%BBtag.png" alt="点击tag.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/jsDelivr+Github%E5%85%8D%E8%B4%B9%E5%88%9B%E5%BB%BA%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90%E5%BA%93/%E5%88%9B%E5%BB%BAreleases%E7%89%88%E6%9C%AC.png" alt="创建releases版本.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/jsDelivr+Github%E5%85%8D%E8%B4%B9%E5%88%9B%E5%BB%BA%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90%E5%BA%93/releases%E7%89%88%E6%9C%AC%E4%BF%A1%E6%81%AF.png" alt="releases版本信息.png"></p>
+<h3 id="访问资源"><a href="#访问资源" class="headerlink" title="访问资源"></a>访问资源</h3><p>通过jsDelivr提供的方式可以直接访问仓库内的资源，方式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/gh/[用户名]/[仓库名称]@[发布版本号]/[文件路径]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>[用户名]为必填项，内容为GitHub用户名；</li>
+<li>[仓库名称]为必填项，内容为GitHub资源仓库名称；</li>
+<li>[发布版本号]为可选项，内容为Release版本号，未填写时（**前部无@<strong>）访问的是最新的资源，填写时（</strong>前部有@**）访问设置版本的资源；</li>
+<li>[文件路径]为必填项，内容为访问文件对应路径；</li>
+</ul>
+]]></content>
+      <categories>
+        <category>搭建博客</category>
+      </categories>
+      <tags>
+        <tag>jsDelivr</tag>
+        <tag>CDN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CopyMemory使用</title>
+    <url>/2021/08/15/CopyMemory%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>首先需要导入win32API：</p>
+<p>[DllImport(“kernel32.dll”)]</p>
+<p>然后声明CopyMemory的方法：</p>
+<p>public static extern void CopyMemory(byte[] Destination, byte[] add, int Length);</p>
+]]></content>
+      <categories>
+        <category>C#</category>
+      </categories>
+      <tags>
+        <tag>CopyMemory</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>halcon中Hobject转bitmap</title>
+    <url>/2021/08/15/halcon%E4%B8%ADHobject%E8%BD%ACbitmap/</url>
+    <content><![CDATA[<p>代码如下：</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 灰度图像 HObject -&gt; Bitmap</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Bitmap <span class="title">HObject2Bitmap</span>(<span class="params">HObject ho</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">try</span></span><br><span class="line">    &#123;</span><br><span class="line">        HTuple type, width, height, pointer;</span><br><span class="line">        <span class="comment">//HOperatorSet.AccessChannel(ho, out ho, 1);</span></span><br><span class="line">        HOperatorSet.GetImagePointer1(ho, <span class="keyword">out</span> pointer, <span class="keyword">out</span> type, <span class="keyword">out</span> width, <span class="keyword">out</span> height);</span><br><span class="line">        <span class="comment">//himg.GetImagePointer1(out type, out width, out height);</span></span><br><span class="line">        Bitmap bmp = <span class="keyword">new</span> Bitmap(width.I, height.I, PixelFormat.Format8bppIndexed);</span><br><span class="line">    ColorPalette pal = bmp.Palette;</span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">255</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        pal.Entries[i] = Color.FromArgb(<span class="number">255</span>, i, i, i);</span><br><span class="line">    &#125;</span><br><span class="line">    bmp.Palette = pal;</span><br><span class="line">    BitmapData bitmapData = bmp.LockBits(<span class="keyword">new</span> Rectangle(<span class="number">0</span>, <span class="number">0</span>, width, height), ImageLockMode.WriteOnly, PixelFormat.Format8bppIndexed);</span><br><span class="line">    <span class="built_in">int</span> PixelSize = Bitmap.GetPixelFormatSize(bitmapData.PixelFormat) / <span class="number">8</span>;</span><br><span class="line">    <span class="built_in">int</span> stride = bitmapData.Stride;</span><br><span class="line">    <span class="built_in">int</span> ptr = bitmapData.Scan0.ToInt32();</span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; height; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        CopyMemory(ptr, pointer, width * PixelSize);</span><br><span class="line">        pointer += width;</span><br><span class="line">        ptr += bitmapData.Stride;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    bmp.UnlockBits(bitmapData);</span><br><span class="line">    <span class="keyword">return</span> bmp;</span><br><span class="line">&#125;</span><br><span class="line">catch (Exception exc)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>halcon</category>
+      </categories>
+      <tags>
+        <tag>halcon</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>三角函数</title>
+    <url>/2021/08/15/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<p>sin=对边/斜边</p>
+<p>cos=邻边/斜边</p>
+<p>tan=对边/邻边</p>
+<p>cot=邻边/对边</p>
+<p>sec=斜边/邻边</p>
+<p>csc=斜边/对边</p>
+]]></content>
+      <categories>
+        <category>机器视觉</category>
+      </categories>
+      <tags>
+        <tag>三角函数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>旋转坐标计算</title>
+    <url>/2021/08/15/%E6%97%8B%E8%BD%AC%E5%9D%90%E6%A0%87%E8%AE%A1%E7%AE%97/</url>
+    <content><![CDATA[<p>(x,y)为要转的点，（pointx,pointy)为中心点，如果顺时针角度为angle</p>
+<p>srx = (x-pointx)*cos(angle) + (y-pointy)*sin(angle)+pointx</p>
+<p>sry = (y-pointy)*cos(angle) - (x-pointx)*sin(angle)+pointy</p>
+<p>(x,y)为要转的点，（pointx,pointy)为中心点，如果逆时针角度为angle</p>
+<p>nrx = (x-pointx)*cos(angle) - (y-pointy)*sin(angle)+pointx</p>
+<p>nry = (x-pointx)*sin(angle) + (y-pointy)*cos(angle)+pointy</p>
+]]></content>
+      <categories>
+        <category>机器视觉</category>
+      </categories>
+      <tags>
+        <tag>三角函数</tag>
+        <tag>旋转中心</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>旋转中心异常</title>
+    <url>/2021/08/15/%E6%97%8B%E8%BD%AC%E4%B8%AD%E5%BF%83%E5%BC%82%E5%B8%B8/</url>
+    <content><![CDATA[<h3 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h3><p>通过三个点拟合园找到旋转中心，机器人只旋转角度后相机拍照，通过该旋转中心计算无法得出xy为0，只存在旋转角度的结果。手动去偏移旋转中心，使得结果达到xy为0，只存在角度的情况，但是此时的旋转中心不为理论的旋转中心，而是外侧的旋转中心；</p>
+<h3 id="问题处理"><a href="#问题处理" class="headerlink" title="问题处理"></a>问题处理</h3><p>出现这个问题主要是在于视觉旋转角度与机器人角度不统一的原因，出现将旋转点带入旋转公式出现xy不为0的情况，首先应该考虑旋转角度方向问题，具体旋转公式代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//(x,y)为要转的点，（pointx,pointy)为中心点，如果顺时针角度为angle</span><br><span class="line">srx = (x-pointx)cos(angle) + (y-pointy)sin(angle)+pointx</span><br><span class="line">sry = (y-pointy)cos(angle) - (x-pointx)sin(angle)+pointy</span><br><span class="line">//(x,y)为要转的点，（pointx,pointy)为中心点，如果逆时针角度为angle</span><br><span class="line">nrx = (x-pointx)cos(angle) - (y-pointy)sin(angle)+pointx</span><br><span class="line">nry = (x-pointx)sin(angle) + (y-pointy)cos(angle)+pointy</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>机器视觉</category>
+      </categories>
+      <tags>
+        <tag>三角函数</tag>
+        <tag>旋转中心</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>访问修饰符</title>
+    <url>/2021/08/15/%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6/</url>
+    <content><![CDATA[<h3 id="pubilc"><a href="#pubilc" class="headerlink" title="pubilc"></a>pubilc</h3><ul>
+<li>可以应用于类型或类型成员；</li>
+<li>公共的项没有限制；</li>
+<li>公共成员可从对象以及任何派生类访问；</li>
+<li>公共类型可以从其他外部程序集进行访问；</li>
+</ul>
+<h3 id="private"><a href="#private" class="headerlink" title="private"></a>private</h3><ul>
+<li>可以应用于类型成员或者嵌套类型；</li>
+<li>私有项只有由定义它们的类或者结构进行访问；</li>
+</ul>
+<h3 id="protected"><a href="#protected" class="headerlink" title="protected"></a>protected</h3><ul>
+<li>可以应用于类型成员或者嵌套类型；</li>
+<li>受保护项可以由定义它们的类及其任意子类使用，但外部类无法通过C#的店操作符访问；</li>
+</ul>
+<h3 id="internal"><a href="#internal" class="headerlink" title="internal"></a>internal</h3><ul>
+<li>可以应用于类型或者类型成员；</li>
+<li>内部项只能在当前程序集中访问；</li>
+</ul>
+<h3 id="protected-internal"><a href="#protected-internal" class="headerlink" title="protected internal"></a>protected internal</h3><ul>
+<li>可以应用于类型成员或者嵌套类型；</li>
+<li>如果在一个项上组合protected和internal关键字，项在定义它们的程序集、类以及派生类中可用；</li>
+</ul>
+]]></content>
+      <categories>
+        <category>C#</category>
+      </categories>
+      <tags>
+        <tag>C#</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo设置主页置顶文章</title>
+    <url>/2021/06/22/Hexo%E8%AE%BE%E7%BD%AE%E4%B8%BB%E9%A1%B5%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<p>按照操作来，就可以把想要的文章置顶！</p>
+<span id="more"></span>
+
+<h3 id="修改脚本代码"><a href="#修改脚本代码" class="headerlink" title="修改脚本代码"></a>修改脚本代码</h3><p>1、在项目文件夹下<strong>node_modules\hexo-generator-index\lib</strong>文件夹中，找到博客主页编译对应脚本文件<strong>generator.js</strong>并打开。</p>
+<p>2、找到以下代码内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sort(posts.data, (a, b) =&gt; (b.sticky || 0) - (a.sticky || 0));</span><br></pre></td></tr></table></figure>
+
+<p>注释或者删除。</p>
+<p>3、在2的位置上粘贴上以下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">posts.data = posts.data.sort(function(a, b) &#123;</span><br><span class="line">        if(a.top &amp;&amp; b.top) &#123; // 两篇文章top都有定义</span><br><span class="line">            if(a.top == b.top) return b.date - a.date; // 若top值一样则按照文章日期降序排</span><br><span class="line">            else return b.top - a.top; // 否则按照top值降序排</span><br><span class="line">        &#125;</span><br><span class="line">        else if(a.top &amp;&amp; !b.top) &#123; // 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</span><br><span class="line">            return -1;</span><br><span class="line">        &#125;</span><br><span class="line">        else if(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">            return 1;</span><br><span class="line">        &#125;</span><br><span class="line">        else return b.date - a.date; // 都没定义按照文章日期降序排</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>4、保存文件</p>
+<h3 id="设置文章顺序"><a href="#设置文章顺序" class="headerlink" title="设置文章顺序"></a>设置文章顺序</h3><p>在文章的文档头可以通过设置：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">top: [num]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>[num]为数字，数字越大，文章排序越靠前</li>
+</ul>
+<p>如果未设置top属性，则默认按照文章发布时间进行排序。</p>
+<blockquote>
+<p>文章置顶标识可以通过tag标签设置</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>搭建博客</category>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo发布文章流程</title>
+    <url>/2021/06/22/Hexo%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0%E6%B5%81%E7%A8%8B/</url>
+    <content><![CDATA[<p>博客站点搭建好后，接下来就需要用文章使其变得充实。</p>
+<span id="more"></span>
+
+<h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><p>在本地博客项目文件夹下打开gitbush，使用以下指令新建一篇新文章：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>[layout]为可选参数，用于指定文章类型，未填写则采用配置文件中default_layout决定。</p>
+</li>
+<li><p>&lt; title&gt;为必填参数，用于指定文章的标题。</p>
+</li>
+</ul>
+<p>指令执行完后会在项目文件夹下的<strong>source/_posts</strong>生成对应文章标题的markdown文件。</p>
+<h3 id="编写文章"><a href="#编写文章" class="headerlink" title="编写文章"></a>编写文章</h3><p>生成的文章为markdown格式，打开后有文章的抬头，接下去就可以用markdown格式编写文章了，这边就不展开说明。</p>
+<h3 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h3><p>使用以下指令清理项目缓存文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
+<p>使用以下指令发布文章：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果原本就有文章，只需要文章开头加入hexo特定格式，并放入_posts文件夹内，也可以进行上传。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>搭建博客</category>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo常用指令</title>
+    <url>/2021/06/12/Hexo%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</url>
+    <content><![CDATA[<p>如果需要持续维护更新用Hexo创建好的博客网站，常见的Hexo指令是必须要了解熟悉的。</p>
+<span id="more"></span>
+
+<h3 id="hexo-init"><a href="#hexo-init" class="headerlink" title="hexo init"></a>hexo init</h3><p>命令用于初始化本地文件夹为网站的根目录</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init [folder]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>[folder]为本地文件夹的名称，如果未填写则默认为当前目录。</li>
+</ul>
+<h3 id="hexo-new"><a href="#hexo-new" class="headerlink" title="hexo new"></a>hexo new</h3><p>这个命令主要用于新建文章，可以简写为<strong>hexo n</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>[layout]为可选参数，用于指定文章类型，未填写则采用配置文件中default_layout决定。</li>
+<li>&lt; title&gt;为必填参数，用于指定文章的标题。</li>
+</ul>
+<h3 id="hexo-generate"><a href="#hexo-generate" class="headerlink" title="hexo generate"></a>hexo generate</h3><p>这个命令用于将hexo项目源码编译为静态文件，可以简写为<strong>hexo g</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>指令后缀：</p>
+<ul>
+<li><strong>-d</strong>选项，用于编译完直接发布，等于顺序执行<strong>hexo gnerate</strong>以及<strong>hexo deploy</strong>。</li>
+</ul>
+<h3 id="hexo-server"><a href="#hexo-server" class="headerlink" title="hexo server"></a>hexo server</h3><p>这个命令用于启动本地服务器，正常用于预览博客页面，可以简写为<strong>hexo s</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>指令后缀：</p>
+<ul>
+<li><strong>-p</strong>选项，指定服务器端口默认为4000。</li>
+<li><strong>-i</strong>选项，指定服务器ip，默认为0.0.0.0。</li>
+<li><strong>-s</strong>选项，静态模式，仅提供public文件夹中文件并禁用文件监视。</li>
+</ul>
+<h3 id="hexo-deploy"><a href="#hexo-deploy" class="headerlink" title="hexo deploy"></a>hexo deploy</h3><p>这个命令用于部署网站，可以简写为hexo d</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>指令后缀：</p>
+<ul>
+<li><strong>-g</strong>选项，与<strong>hexo g -d</strong>作用一致，用于直接编译部署项目。</li>
+</ul>
+<p>具体使用可以参照<a href="https://xidicunmin.github.io/2021/05/31/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">搭建博客</a>一文。</p>
+<h3 id="hexo-clean"><a href="#hexo-clean" class="headerlink" title="hexo clean"></a>hexo clean</h3><p>这个命令用于清理缓存文件，一般编译部署前会使用。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>搭建博客</category>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>迁移hexo博客项目（window）</title>
+    <url>/2021/06/08/%E8%BF%81%E7%A7%BBhexo%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE%EF%BC%88widows%EF%BC%89/</url>
+    <content><![CDATA[<p>最早我的hexo博客环境是搭建在工作笔记本上，后来想说这毕竟是公司的电脑，于是就想在自己电脑也搭建一套环境。</p>
+<span id="more"></span>
+
+<p>如何迁移环境？首先是不考虑通过拷贝的方式，拷贝这个做法可能是最轻松的，但是既然生为一个程序员（半吊子），当然是得采用托管的方式，托管过程中虽然走了几步弯路，但是最终还是成功在我的winmax上编写并发布这篇文章。话不多说，弯路总结如下：</p>
+<h3 id="新建项目文件分支"><a href="#新建项目文件分支" class="headerlink" title="新建项目文件分支"></a>新建项目文件分支</h3><p>在GitHub博客主页仓库下新建分支，并设置为默认分支，我这边分支名称为hexo。这样仓库底下会有两个分支，一个用于存放hexo编译出来的静态页面，另一个则可以用来存放项目源文件。</p>
+<h3 id="下拉空项目文件"><a href="#下拉空项目文件" class="headerlink" title="下拉空项目文件"></a>下拉空项目文件</h3><p>把用于存放源文件的分支通过git clone下拉到本地文件夹。</p>
+<h3 id="添加项目文件并上传"><a href="#添加项目文件并上传" class="headerlink" title="添加项目文件并上传"></a>添加项目文件并上传</h3><p>将hexo项目文件夹的内容全部拷贝到下拉文件夹中，需要注意的是，如果hexo项目文件夹中有GitHub项目时，需要先把该项目下.git文件夹先删除，防止无法正常上传文件夹内容，最后把整个项目上传提交到GitHub博客主页仓库。</p>
+<h3 id="下拉完整项目文件"><a href="#下拉完整项目文件" class="headerlink" title="下拉完整项目文件"></a>下拉完整项目文件</h3><p>在想要搭建博客环境的电脑下git clone博客项目文件。</p>
+<h3 id="项目环境配置"><a href="#项目环境配置" class="headerlink" title="项目环境配置"></a>项目环境配置</h3><p>确保node.js安装正确，在博客·项目文件夹下启动git bash，依次执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>如果可以正常执行，恭喜！可以想想换环境的第一篇博客该写点啥了。</p>
+]]></content>
+      <categories>
+        <category>搭建博客</category>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Basler相机问题记录</title>
+    <url>/2021/06/05/Basler%E7%9B%B8%E6%9C%BA%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h3 id="硬件触发相机无反馈"><a href="#硬件触发相机无反馈" class="headerlink" title="硬件触发相机无反馈"></a>硬件触发相机无反馈</h3><p>1、相机是否处于上一次取像中；</p>
+<p>2、相机是否关闭了采集模式；</p>
+<h3 id="硬件触发相机有反馈无图像"><a href="#硬件触发相机有反馈无图像" class="headerlink" title="硬件触发相机有反馈无图像"></a>硬件触发相机有反馈无图像</h3><p>1、可能是相机巨型帧设置过小，导致取图异常；</p>
+<p>2、网卡巨型帧设置过小；</p>
+<p>3、网卡异常；</p>
+]]></content>
+      <categories>
+        <category>工业相机</category>
+        <category>Basler</category>
+      </categories>
+      <tags>
+        <tag>Basler</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>视觉软件偶然性卡顿问题解决记录</title>
+    <url>/2021/06/05/%E8%A7%86%E8%A7%89%E8%BD%AF%E4%BB%B6%E5%81%B6%E7%84%B6%E6%80%A7%E5%8D%A1%E9%A1%BF%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h3 id="软件现象"><a href="#软件现象" class="headerlink" title="软件现象"></a>软件现象</h3><p>1、给plc回复信号过长，整个周期超出预期；</p>
+<p>2、查看日志发现延时位置随机；</p>
+<p>3、接收通讯是在通讯线程，图像到达是在图像线程，处理逻辑在ui线程；</p>
+<h3 id="可能原因"><a href="#可能原因" class="headerlink" title="可能原因"></a>可能原因</h3><p>1、ui线程写日志，导致占用ui线程资源；</p>
+]]></content>
+      <categories>
+        <category>C#</category>
+        <category>机器视觉</category>
+      </categories>
+      <tags>
+        <tag>机器视觉</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Pylon软件安装以及连接相机</title>
+    <url>/2021/06/03/Pylon%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E8%BF%9E%E6%8E%A5%E7%9B%B8%E6%9C%BA/</url>
+    <content><![CDATA[<h2 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h2><p>双击打开pylon安装包，按照下图顺序进行安装：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/Pylon5%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A41.png" alt="截图"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/Pylon5%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A42.png" alt="截图"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/Pylon5%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A43.png" alt="截图"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/Pylon5%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A44.png" alt="截图"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/Pylon5%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A45.png" alt="截图"></p>
+<p>点击instal，等待软件安装完成。</p>
+<h2 id="连接相机"><a href="#连接相机" class="headerlink" title="连接相机"></a>连接相机</h2><h3 id="GigE类型"><a href="#GigE类型" class="headerlink" title="GigE类型"></a>GigE类型</h3><p>双击桌面中pylon IP Configurator图标进入相机配置界面：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/gige%E7%9B%B8%E6%9C%BA%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E7%95%8C%E9%9D%A2.png" alt="截图"></p>
+<ol>
+<li>为相机显示窗口，会自动罗列目前检测的相机，并标注当前相机的状态；</li>
+<li>配置相机ip的位置，正常采用static IP配置，也就是静态ip设置，将相机与网口的网段设置一致，点击保存就可以连接上相机；</li>
+</ol>
+<p>如果桌面并没有该软件图标，可以到软件安装目录下去启动：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/gige%E7%9B%B8%E6%9C%BA%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95.png" alt="截图"></p>
+<h3 id="CameraLink类型"><a href="#CameraLink类型" class="headerlink" title="CameraLink类型"></a>CameraLink类型</h3><p>进入pylon软件安装根目录，将CL相机配置软件发送到桌面快捷方式：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/cl%E7%9B%B8%E6%9C%BA%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95.png" alt="截图"></p>
+<p>打开ClConfigurator软件，勾选上所有端口进行相机搜索：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/cl%E7%9B%B8%E6%9C%BA%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E6%89%BE%E5%AF%BB%E7%9B%B8%E6%9C%BA.png" alt="截图"></p>
+<p>搜索到相机后添加保存，如果没有搜索到相机，请检查相机接线和软件是否安装到位，有很大可能是两根CameraLink线接反了：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/cl%E7%9B%B8%E6%9C%BA%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E7%9B%B8%E6%9C%BA%E7%BB%93%E6%9E%9C.png" alt="截图"></p>
+]]></content>
+      <categories>
+        <category>工业相机</category>
+        <category>Basler</category>
+      </categories>
+      <tags>
+        <tag>Basler</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Basler相机硬件触发设置</title>
+    <url>/2021/06/02/Basler%E7%9B%B8%E6%9C%BA%E7%A1%AC%E4%BB%B6%E8%A7%A6%E5%8F%91%E8%AE%BE%E7%BD%AE/</url>
+    <content><![CDATA[<p>很多项目为了节省时序都应用上硬件触发，最近正好有项目涉及到这方面，正好借此机会记录一下。</p>
+<span id="more"></span>
+
+<h2 id="相机接线"><a href="#相机接线" class="headerlink" title="相机接线"></a>相机接线</h2><p>由于是硬件触发，也就是io信号触发，所以是需要通过外部接线来触发相机进行拍照的。相机pin脚示意图如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.3/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/Basler%E9%9D%A2%E9%98%B5%E7%9B%B8%E6%9C%BApin%E8%84%9A%E5%9B%BE.png" alt="Basler面阵相机pin脚图.png"></p>
+<p>另外pin4为输出io，如果有需要的话可以通过软件设置什么时间点输出io。</p>
+<p>io触发接线示意图如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.3/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/Basler%E7%9B%B8%E6%9C%BA%E6%8E%A5%E7%BA%BF%E5%9B%BE.png" alt="Basler相机接线图.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/Basler%E7%9B%B8%E6%9C%BA%E6%8E%A5%E7%BA%BF%E5%9B%BE1.png" alt="Basler相机接线图1.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/Basler%E7%9B%B8%E6%9C%BA%E6%8E%A5%E7%BA%BF%E5%9B%BE2.png" alt="Basler相机接线图2.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/Basler%E7%9B%B8%E6%9C%BA%E6%8E%A5%E7%BA%BF%E5%9B%BE3.png" alt="Basler相机接线图3.png"></p>
+<p>如图所示，如果使用12v作为外触发电压，需要串联1k电阻，如果使用24v电压，则需要串联2k电阻。如果未串联电阻，可能会出现触发异常的情况。</p>
+<p>io输出接线图如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.5/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/Basler%E7%9B%B8%E6%9C%BAio%E8%BE%93%E5%87%BA%E6%8E%A5%E7%BA%BF%E5%9B%BE.png" alt="Basler相机io输出接线图.png"></p>
+<p>如图所示，接线实际为闭环电路，io未输出时线路未闭合，当io输出时线路闭合，图中所示的led灯泡随之点亮。</p>
+<h2 id="相机配置"><a href="#相机配置" class="headerlink" title="相机配置"></a>相机配置</h2><p>打开Basler官方相机软件pylon，链接相机并修改为大师模式，示意图如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.3/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/Pylon%E6%89%93%E5%BC%80%E7%9B%B8%E6%9C%BA.png" alt="Pylon打开相机.png"></p>
+<p>务必要选择大师模式，这样能更改的相机权限更多。</p>
+<p>需要更改的相机设置主要有两部分：</p>
+<h3 id="相机输入信号"><a href="#相机输入信号" class="headerlink" title="相机输入信号"></a>相机输入信号</h3><p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.3/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/Pylon%E7%A1%AC%E4%BB%B6%E8%A7%A6%E5%8F%91%E8%BE%93%E5%85%A5%E4%BF%A1%E5%8F%B7%E8%AE%BE%E7%BD%AE.png" alt="Pylon硬件触发输入信号设置.png"></p>
+<ul>
+<li>Trigger Mode为触发模式，on为开启触发模式，off则是自由采集模式；</li>
+<li>Trigger Sourse为触发来源，硬触发选择Line1，也可以选择软触发选项；</li>
+<li>Trigger Activation为触发的信号模式，有上升沿下降沿可选；</li>
+</ul>
+<p>按照图中所示设置就完成了相机硬件触发中输入信号的设置。</p>
+<h3 id="相机输出信号"><a href="#相机输出信号" class="headerlink" title="相机输出信号"></a>相机输出信号</h3><p>这部分为可选项，是否需要设置看项目需求，具体设置位置如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.3/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/Pylon%E8%BE%93%E5%87%BA%E4%BF%A1%E5%8F%B7%E8%AE%BE%E7%BD%AE.png" alt="Pylon输出信号设置.png"></p>
+<ul>
+<li>Line Selector为信号线设置，输出线路选择Line2；</li>
+<li>Line Source为输出信号的时间，可以根据需求进行选择；</li>
+<li>Line Inverter为信号反置，勾选时输出信号反置；</li>
+</ul>
+<h2 id="保存配置"><a href="#保存配置" class="headerlink" title="保存配置"></a>保存配置</h2><p>basler相机正常会留有几个用户设置可供切换，这些配置是存在相机自带的内存中，具体保存位置如下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.3/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/Pylon%E9%85%8D%E7%BD%AE%E4%BF%9D%E5%AD%98.png" alt="Pylon配置保存.png"></p>
+<ul>
+<li>User Set Selector为当前选中的用户配置；</li>
+<li>User Set Load为将当前选中用户配置载入到当前配置；</li>
+<li>User Set Save为将当前配置保存到选中的用户配置中；</li>
+<li>Default Startup Set为设置相机开始默认启用的配置；</li>
+</ul>
+<p>需要注意的是保存过后可以再载入一下，确认配置是否正确保存到用户配置中。</p>
+<h2 id="取图测试"><a href="#取图测试" class="headerlink" title="取图测试"></a>取图测试</h2><p>配置完成后可以通过软件进行取图测试，在确保相机正常连接的情况下，上方的操作栏如图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.3/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/Pylon%E5%8F%96%E5%9B%BE%E6%93%8D%E4%BD%9C%E6%A0%8F.png" alt="Pylon取图操作栏.png"></p>
+<ol>
+<li>单次采集，点击过后会弹出取图窗口，当取完图像会自动关闭采集通道，不再接受触发；</li>
+<li>批量采集，点击过后会弹出取图窗口，取完图像过后不会关闭采集通道，可以持续接受触发，需要手动停止；</li>
+<li>停止采集通道，点击过后不再接收触发指令的触发；</li>
+<li>相机取图状态，显示取图的张数以及当前帧率，可以用于判断是否有取到图像；</li>
+</ol>
+<p>测试相机的时候务必需要打开相机采集通道，否则无法触发相机。</p>
+]]></content>
+      <categories>
+        <category>工业相机</category>
+        <category>Basler</category>
+      </categories>
+      <tags>
+        <tag>Basler</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo更换主题</title>
+    <url>/2021/06/01/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/</url>
+    <content><![CDATA[<p>初始主题说实话真是不大行，有必要更换一套主题，提升下整体逼格。</p>
+<span id="more"></span>
+
+<h3 id="寻找主题"><a href="#寻找主题" class="headerlink" title="寻找主题"></a>寻找主题</h3><p>寻找主题的途径有许多，使用常用搜索引擎搜索就能让你眼花缭乱</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.2/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/%E6%90%9C%E7%B4%A2hexo%E4%B8%BB%E9%A2%98.png" alt="搜索hexo主题.png"></p>
+<p>好在Hexo很人性化，提供官方的<a href="https://hexo.io/themes/">主题网站</a>供我们选择。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.2/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/%E5%AE%98%E6%96%B9%E4%B8%BB%E9%A2%98%E7%AB%99%E7%82%B9.png" alt="官方主题站点.png"></p>
+<p>站内主题数量还是比较客观的，网上教程大部分推荐的都是Next主题，但是像我有明确的目标，我想要的主题是MD风格的，那么就可以在搜索栏进行关键字搜索。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.2/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/md%E4%B8%BB%E9%A2%98%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C.png" alt="md主题搜索结果.png"></p>
+<p>在搜索结果点击预览图可以直接进入主题的demo中查看，通过一番比较，最终我选择了Meadow这款主题，接下来的安装也以此主题为基础。</p>
+<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>在搜索页点击预览图下的文字就可以进入主题的github主页（可能需要科学上网）：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.2/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/%E4%B8%BB%E9%A2%98github%E4%B8%BB%E9%A1%B5.png" alt="主题github主页.png"></p>
+<p>点击code查看主题链接并复制：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.2/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/%E4%B8%BB%E9%A2%98git%E5%9C%B0%E5%9D%80.png" alt="主题git地址.png"></p>
+<p>将主题clone到hexo项目文件夹下themes文件夹下，指令如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.2/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/%E4%B8%8B%E8%BD%BD%E4%B8%BB%E9%A2%98.png" alt="下载主题.png"></p>
+<p>通过此条指令会在themes下自动生成meadow文件夹，并将主题内容clone到文件夹内：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.2/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/%E4%B8%BB%E9%A2%98%E7%9B%AE%E5%BD%95.png" alt="主题目录.png"></p>
+<p>这样主题算安装完成了。</p>
+<h3 id="使用主题"><a href="#使用主题" class="headerlink" title="使用主题"></a>使用主题</h3><p>主题安装后通过简单配置就可以使用了。</p>
+<p>打开项目根目录配置文件_config.yml，找到下图位置，并修改成主题文件夹的名称保存并关闭：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.2/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/%E4%BD%BF%E7%94%A8%E4%B8%BB%E9%A2%98.png" alt="使用主题.png"></p>
+<p>在根目录打开git bath，依次输入以下指令更新项目：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>更新编译完成可以开启本地服务：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>或者直接部署到GitHub上：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>更换皮肤效果如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.2/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/%E4%B8%BB%E9%A2%98%E5%B1%95%E7%A4%BA.png" alt="主题展示.png"></p>
+<p>关于hexo个性化配置以及主题配置后续再进行讲解。</p>
+]]></content>
+      <categories>
+        <category>搭建博客</category>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+</search>

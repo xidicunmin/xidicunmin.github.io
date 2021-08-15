@@ -1,692 +1,895 @@
 <!DOCTYPE html>
+
+
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    
-    <meta name="referrer" content="no-referrer-when-downgrade">
-    
-    <meta name="renderer" content="webkit"/>
-    <meta name="force-rendering" content="webkit"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
-    
-    
-        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
-        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
-    
-    
-    
-        <link rel="shortcut icon" href="/icons/favicon.ico">
-    
+  
 
-    
-    
+    <head>
+      <meta charset="utf-8" />
         
-<link rel="stylesheet" href="/css/mdui.min.v1.0.0.css">
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> 阿冒的仓库</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
 
-    
-    
-<link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="/css/iconfont.css">
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
 
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
 
-    
-    
-
-    
-        <script data-ad-client="ca-" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-    
-        <script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        
-            load: ['[tex]/mhchem'],
-        
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
         }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        
-            packages: {'[+]': ['mhchem']},
-        
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-          
+      </style>
+    <link rel="alternate" href="/atom.xml" title="阿冒的仓库" type="application/atom+xml">
+</head>
+  </html>
+</html>
 
 
+<body>
+  <div id="app">
     
-    
-    <title>
-          
-            阿冒的仓库
-        
-    </title>
-    
-    
-<meta name="generator" content="Hexo 5.4.0"></head>
-<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-blue">
-  
-  <header class="mdui-appbar mdui-appbar-fixed">
-  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
-    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
-    <a href="/" class="mdui-typo-headline">阿冒的仓库</a>
-    <a href="/" class="header-subtitle mdui-typo-headline"></a>
-    <div class="mdui-toolbar-spacer"></div>
-    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
-  </div>
-</header>
+      
+    <main class="content on">
+      
 
-<div class="mdui-dialog" id="search">
+
+
+<!-- Subtitle -->
+
+<div id="main">
+  <section class="outer">
   
-    <div class="search-form">
-      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
-    </div>
-    <div class="search-result" data-resource="/search.xml"></div>
   
+  
+
+<div class="notice" style="margin-top:50px">
+    <i class="ri-heart-fill"></i>
+    <div class="notice-content" id="broad"></div>
 </div>
+<script type="text/javascript">
+    fetch('https://v1.hitokoto.cn')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("broad").innerHTML = data.hitokoto;
+        })
+        .catch(console.error)
+</script>
 
-  <aside id="sidebar" class="mdui-drawer">
-    <div class="mdui-tab" mdui-tab>
-        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">站点概览</a>
-        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">关于</a>
-    </div>
+<style>
+    .notice {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+    }
 
-    
-    <div id="sidebar-tab1" class="mdui-p-a-1">
-        <div class="mdui-list">
-            
-                
-                <a href="/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-home"></i>
-                    </div>
-                    <div class="mdui-list-item-content">主页</div>
-                </a>
-            
-                
-                <a href="/tags/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-bookmark"></i>
-                    </div>
-                    <div class="mdui-list-item-content">标签</div>
-                </a>
-            
-                
-                <a href="/categories/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-folder"></i>
-                    </div>
-                    <div class="mdui-list-item-content">分类</div>
-                </a>
-            
-                
-                <a href="/archives/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-archive"></i>
-                    </div>
-                    <div class="mdui-list-item-content">归档</div>
-                </a>
-            
-            <div class="mdui-list-item mdui-ripple">
-                <div class="mdui-list-item-icon">
-                    <i class="iconfont icon-moon"></i>
-                </div>
-                <div class="mdui-list-item-content">夜间模式</div>
-                <label class="mdui-switch" id="darkmode">
-                  <input type="checkbox" id="nightmode_switch"/>
-                  <i class="mdui-switch-icon"></i>
-                </label>
-            </div>           
-        </div>
-    </div>
+    .notice i {
+        float: left;
+        color: #999;
+        font-size: 16px;
+        padding-right: 10px;
+        vertical-align: middle;
+        margin-top: -2px;
+    }
 
-    
-    <div id="sidebar-tab2" class="mdui-p-a-1">
-        <div class="sidebar-overview">
-            <div class="sidebar-avatar">
-                
-                    <img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN/头像/小时候.jpg"/>
-                
-            </div>
-            <div class="sidebar-author-name">xidicunmin</div>
-            <div class="sidebar-description"></div>
-        </div>
-        <div class="sidebar-links">
-            
-                
-                <div class="mdui-chip">
-                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
-                    <a href="mailto:redwangshifu@sina.com" class="mdui-chip-title">E-Mail</a>
-                </div>
-            
-                
-                <div class="mdui-chip">
-                    <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
-                    <a target="_blank" rel="noopener" href="https://github.com/xidicunmin" class="mdui-chip-title">GitHub</a>
-                </div>
-            
-                
-                <div class="mdui-chip">
-                    <span class="mdui-chip-icon"><i class="iconfont icon-weibo"></i></span>
-                    <a target="_blank" rel="noopener" href="https://weibo.com/wsz19950816" class="mdui-chip-title">Weibo</a>
-                </div>
-            
-        </div>
-        <ul class="mdui-list" mdui-collapse="{accordion: true}">
-            <li class="mdui-collapse-item">
-                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-link"></i>
-                    </div>
-                    <div class="mdui-list-item-content">友情链接</div>
-                    <div class="mdui-collapse-item-arrow">
-                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
-                    </div>
-                </div>
-                <ul id="linksList" class="mdui-collapse-item-body mdui-list mdui-list-dense">
-                    
-                </ul>
-            </li>
-        </ul>
-    </div>
-
-    <div class="mdui-divider"></div>
-    
-    
-</aside>
+    .notice-content {
+        display: initial;
+        vertical-align: middle;
+    }
+</style>
   
-  <main id="main-contain" class="mdui-container mdui-m-t-5">
+  <article class="articles">
     
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2021/06/08/%E8%BF%81%E7%A7%BBhexo%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE%EF%BC%88widows%EF%BC%89/">迁移hexo博客项目（window）</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2021-06-08
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2021-06-08
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">搭建博客</a> > <a class="category-link" href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/hexo/">hexo</a>
-    </span>
     
+    
+    
+    <article
+  id="post-Hexo常用指令"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/12/Hexo%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"
+    >Hexo常用指令</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/12/Hexo%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" class="article-date">
+  <time datetime="2021-06-12T11:20:00.000Z" itemprop="datePublished">2021-06-12</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">搭建博客</a> / <a class="article-category-link" href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/hexo/">hexo</a>
   </div>
-</div>   
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>如果需要持续维护更新用Hexo创建好的博客网站，常见的Hexo指令是必须要了解熟悉的。</p> 
+      <a class="article-more-link" href="/2021/06/12/Hexo%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
     
 
-
-
-      
-      
-  <div class="post-tags">
+    <!-- copyright -->
     
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/hexo/ >hexo</a>
-      </i>
-    
-  </div>
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
 
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <p>最早我的hexo博客环境是搭建在工作笔记本上，后来想说这毕竟是公司的电脑，于是就想在自己电脑也搭建一套环境。</p>
-          
-        </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2021/06/08/%E8%BF%81%E7%A7%BBhexo%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE%EF%BC%88widows%EF%BC%89/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2021/06/05/Basler%E7%9B%B8%E6%9C%BA%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">Basler相机问题记录</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2021-06-05
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2021-06-22
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/">工业相机</a> > <a class="category-link" href="/categories/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/Basler/">Basler</a>
-    </span>
-    
-  </div>
-</div>   
-    
-
-
-
-      
-      
-  <div class="post-tags">
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/Basler/ >Basler</a>
-      </i>
-    
+    </footer>
   </div>
 
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-迁移hexo博客项目（widows）"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/08/%E8%BF%81%E7%A7%BBhexo%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE%EF%BC%88widows%EF%BC%89/"
+    >迁移hexo博客项目（window）</a> 
+</h2>
+ 
+
       
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <h3 id="硬件触发相机无反馈"><a href="#硬件触发相机无反馈" class="headerlink" title="硬件触发相机无反馈"></a>硬件触发相机无反馈</h3><p>1、相机是否处于上一次取像中；</p>
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/08/%E8%BF%81%E7%A7%BBhexo%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE%EF%BC%88widows%EF%BC%89/" class="article-date">
+  <time datetime="2021-06-08T15:32:00.000Z" itemprop="datePublished">2021-06-08</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">搭建博客</a> / <a class="article-category-link" href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/hexo/">hexo</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>最早我的hexo博客环境是搭建在工作笔记本上，后来想说这毕竟是公司的电脑，于是就想在自己电脑也搭建一套环境。</p> 
+      <a class="article-more-link" href="/2021/06/08/%E8%BF%81%E7%A7%BBhexo%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE%EF%BC%88widows%EF%BC%89/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-Basler相机问题记录"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/05/Basler%E7%9B%B8%E6%9C%BA%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"
+    >Basler相机问题记录</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/05/Basler%E7%9B%B8%E6%9C%BA%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" class="article-date">
+  <time datetime="2021-06-05T12:10:00.000Z" itemprop="datePublished">2021-06-05</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/">工业相机</a> / <a class="article-category-link" href="/categories/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/Basler/">Basler</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h3 id="硬件触发相机无反馈"><a href="#硬件触发相机无反馈" class="headerlink" title="硬件触发相机无反馈"></a>硬件触发相机无反馈</h3><p>1、相机是否处于上一次取像中；</p>
 <p>2、相机是否关闭了采集模式；</p>
 <h3 id="硬件触发相机有反馈无图像"><a href="#硬件触发相机有反馈无图像" class="headerlink" title="硬件触发相机有反馈无图像"></a>硬件触发相机有反馈无图像</h3><p>1、可能是相机巨型帧设置过小，导致取图异常；</p>
 <p>2、网卡巨型帧设置过小；</p>
-...
-          
-        </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2021/06/05/Basler%E7%9B%B8%E6%9C%BA%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+<p>3、网卡异常；</p>
+ 
+      <!-- reward -->
       
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2021/06/05/%E8%A7%86%E8%A7%89%E8%BD%AF%E4%BB%B6%E5%81%B6%E7%84%B6%E6%80%A7%E5%8D%A1%E9%A1%BF%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/">视觉软件偶然性卡顿问题解决记录</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2021-06-05
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2021-06-07
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/C/">C#</a> > <a class="category-link" href="/categories/C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/">机器视觉</a>
-    </span>
-    
-  </div>
-</div>   
+    </div>
     
 
-
-
-      
-      
-  <div class="post-tags">
+    <!-- copyright -->
     
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/ >机器视觉</a>
-      </i>
-    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Basler/" rel="tag">Basler</a></li></ul>
+
+    </footer>
   </div>
 
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-视觉软件偶然性卡顿问题解决记录"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/05/%E8%A7%86%E8%A7%89%E8%BD%AF%E4%BB%B6%E5%81%B6%E7%84%B6%E6%80%A7%E5%8D%A1%E9%A1%BF%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/"
+    >视觉软件偶然性卡顿问题解决记录</a> 
+</h2>
+ 
+
       
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <h3 id="软件现象"><a href="#软件现象" class="headerlink" title="软件现象"></a>软件现象</h3><p>1、给plc回复信号过长，整个周期超出预期；</p>
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/05/%E8%A7%86%E8%A7%89%E8%BD%AF%E4%BB%B6%E5%81%B6%E7%84%B6%E6%80%A7%E5%8D%A1%E9%A1%BF%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/" class="article-date">
+  <time datetime="2021-06-05T12:10:00.000Z" itemprop="datePublished">2021-06-05</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C/">C#</a> / <a class="article-category-link" href="/categories/C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/">机器视觉</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h3 id="软件现象"><a href="#软件现象" class="headerlink" title="软件现象"></a>软件现象</h3><p>1、给plc回复信号过长，整个周期超出预期；</p>
 <p>2、查看日志发现延时位置随机；</p>
 <p>3、接收通讯是在通讯线程，图像到达是在图像线程，处理逻辑在ui线程；</p>
 <h3 id="可能原因"><a href="#可能原因" class="headerlink" title="可能原因"></a>可能原因</h3><p>1、ui线程写日志，导致占用ui线程资源；</p>
-          
-        </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2021/06/05/%E8%A7%86%E8%A7%89%E8%BD%AF%E4%BB%B6%E5%81%B6%E7%84%B6%E6%80%A7%E5%8D%A1%E9%A1%BF%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+ 
+      <!-- reward -->
       
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2021/06/03/Pylon%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E8%BF%9E%E6%8E%A5%E7%9B%B8%E6%9C%BA/">Pylon软件安装以及连接相机</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2021-06-03
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2021-06-07
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/">工业相机</a> > <a class="category-link" href="/categories/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/Basler/">Basler</a>
-    </span>
-    
-  </div>
-</div>   
+    </div>
     
 
-
-
-      
-      
-  <div class="post-tags">
+    <!-- copyright -->
     
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/Basler/ >Basler</a>
-      </i>
-    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/" rel="tag">机器视觉</a></li></ul>
+
+    </footer>
   </div>
 
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-Pylon软件安装以及连接相机"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/03/Pylon%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E8%BF%9E%E6%8E%A5%E7%9B%B8%E6%9C%BA/"
+    >Pylon软件安装以及连接相机</a> 
+</h2>
+ 
+
       
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <h2 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h2><p>双击打开pylon安装包，按照下图顺序进行安装：</p>
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/03/Pylon%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E8%BF%9E%E6%8E%A5%E7%9B%B8%E6%9C%BA/" class="article-date">
+  <time datetime="2021-06-03T12:02:30.000Z" itemprop="datePublished">2021-06-03</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/">工业相机</a> / <a class="article-category-link" href="/categories/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/Basler/">Basler</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h2><p>双击打开pylon安装包，按照下图顺序进行安装：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/Pylon5%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A41.png" alt="截图"></p>
-<p><img src="https://cd...
-          
-        </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2021/06/03/Pylon%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E8%BF%9E%E6%8E%A5%E7%9B%B8%E6%9C%BA/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/Pylon5%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A42.png" alt="截图"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/Pylon5%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A43.png" alt="截图"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/Pylon5%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A44.png" alt="截图"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/Pylon5%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A45.png" alt="截图"></p>
+<p>点击instal，等待软件安装完成。</p>
+<h2 id="连接相机"><a href="#连接相机" class="headerlink" title="连接相机"></a>连接相机</h2><h3 id="GigE类型"><a href="#GigE类型" class="headerlink" title="GigE类型"></a>GigE类型</h3><p>双击桌面中pylon IP Configurator图标进入相机配置界面：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/gige%E7%9B%B8%E6%9C%BA%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E7%95%8C%E9%9D%A2.png" alt="截图"></p>
+<ol>
+<li>为相机显示窗口，会自动罗列目前检测的相机，并标注当前相机的状态；</li>
+<li>配置相机ip的位置，正常采用static IP配置，也就是静态ip设置，将相机与网口的网段设置一致，点击保存就可以连接上相机；</li>
+</ol>
+<p>如果桌面并没有该软件图标，可以到软件安装目录下去启动：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/gige%E7%9B%B8%E6%9C%BA%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95.png" alt="截图"></p>
+<h3 id="CameraLink类型"><a href="#CameraLink类型" class="headerlink" title="CameraLink类型"></a>CameraLink类型</h3><p>进入pylon软件安装根目录，将CL相机配置软件发送到桌面快捷方式：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/cl%E7%9B%B8%E6%9C%BA%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95.png" alt="截图"></p>
+<p>打开ClConfigurator软件，勾选上所有端口进行相机搜索：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/cl%E7%9B%B8%E6%9C%BA%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E6%89%BE%E5%AF%BB%E7%9B%B8%E6%9C%BA.png" alt="截图"></p>
+<p>搜索到相机后添加保存，如果没有搜索到相机，请检查相机接线和软件是否安装到位，有很大可能是两根CameraLink线接反了：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Basler/cl%E7%9B%B8%E6%9C%BA%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E7%9B%B8%E6%9C%BA%E7%BB%93%E6%9E%9C.png" alt="截图"></p>
+ 
+      <!-- reward -->
       
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2021/06/02/Basler%E7%9B%B8%E6%9C%BA%E7%A1%AC%E4%BB%B6%E8%A7%A6%E5%8F%91%E8%AE%BE%E7%BD%AE/">Basler相机硬件触发设置</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2021-06-02
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2021-06-16
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/">工业相机</a> > <a class="category-link" href="/categories/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/Basler/">Basler</a>
-    </span>
-    
-  </div>
-</div>   
-    
-
-
-
-      
-      
-  <div class="post-tags">
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/Basler/ >Basler</a>
-      </i>
-    
-  </div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <p>很多项目为了节省时序都应用上硬件触发，最近正好有项目涉及到这方面，正好借此机会记录一下。</p>
-          
-        </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2021/06/02/Basler%E7%9B%B8%E6%9C%BA%E7%A1%AC%E4%BB%B6%E8%A7%A6%E5%8F%91%E8%AE%BE%E7%BD%AE/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="mdui-card-media">
-          
-            <img src = https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.2/博客图片/Hexo更换主题/MD壁纸.jpeg >
-          
-          <div class="mdui-card-media-covered">
-            <div class="post-header"> 
-  <a class="post-header-title" href="/2021/06/01/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/">Hexo更换主题</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2021-06-01
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2021-06-07
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">搭建博客</a> > <a class="category-link" href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/hexo/">hexo</a>
-    </span>
-    
-  </div>
-</div>   
-    
-
-
-
-          </div>
-        </div>
-      
-      
-  <div class="post-tags">
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/hexo/ >hexo</a>
-      </i>
-    
-  </div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <p>初始主题说实话真是不大行，有必要更换一套主题，提升下整体逼格。</p>
-          
-        </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2021/06/01/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="mdui-card-media">
-          
-            <img src = https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.1/博客图片/GitHub搭配Hexo生成个人博客/本地主页.png >
-          
-          <div class="mdui-card-media-covered">
-            <div class="post-header"> 
-  <a class="post-header-title" href="/2021/05/31/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">GitHub搭配Hexo生成个人博客</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2021-05-31
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2021-07-14
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">搭建博客</a> > <a class="category-link" href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/hexo/">hexo</a>
-    </span>
-    
-  </div>
-</div>   
-    
-
-
-
-          </div>
-        </div>
-      
-      
-  <div class="post-tags">
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/hexo/ >hexo</a>
-      </i>
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/%E7%BD%AE%E9%A1%B6/ >置顶</a>
-      </i>
-    
-  </div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <p>通过GitHub和Hexo来搭建自己的第一个博客吧！</p>
-          
-        </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2021/05/31/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-
-
-  <nav style="text-align: center;">
-    <div class="pagination">
-      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
     </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Basler/" rel="tag">Basler</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-Basler相机硬件触发设置"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/02/Basler%E7%9B%B8%E6%9C%BA%E7%A1%AC%E4%BB%B6%E8%A7%A6%E5%8F%91%E8%AE%BE%E7%BD%AE/"
+    >Basler相机硬件触发设置</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/02/Basler%E7%9B%B8%E6%9C%BA%E7%A1%AC%E4%BB%B6%E8%A7%A6%E5%8F%91%E8%AE%BE%E7%BD%AE/" class="article-date">
+  <time datetime="2021-06-02T11:13:02.000Z" itemprop="datePublished">2021-06-02</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/">工业相机</a> / <a class="article-category-link" href="/categories/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/Basler/">Basler</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>很多项目为了节省时序都应用上硬件触发，最近正好有项目涉及到这方面，正好借此机会记录一下。</p> 
+      <a class="article-more-link" href="/2021/06/02/Basler%E7%9B%B8%E6%9C%BA%E7%A1%AC%E4%BB%B6%E8%A7%A6%E5%8F%91%E8%AE%BE%E7%BD%AE/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Basler/" rel="tag">Basler</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-Hexo更换主题"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/01/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/"
+    >Hexo更换主题</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/01/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/" class="article-date">
+  <time datetime="2021-06-01T14:47:31.000Z" itemprop="datePublished">2021-06-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">搭建博客</a> / <a class="article-category-link" href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/hexo/">hexo</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <div class="article-gallery">
+    <div class="article-gallery-photos">
+      
+        
+          <a class="article-gallery-img" href="/2021/06/01/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/" rel="gallery_cksdfggmp000e9ouqdijlg14j">
+            <img src="https://cdn.jsdelivr.net/gh/xidicunmin/CDN@1.2/博客图片/Hexo更换主题/MD壁纸.jpeg" itemprop="image">
+          </a>
+        
+      
+    </div>
+  </div>
+
+  <p>初始主题说实话真是不大行，有必要更换一套主题，提升下整体逼格。</p> 
+      <a class="article-more-link" href="/2021/06/01/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
   </nav>
+  
+</section>
+</div>
 
-  </main>
-  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
-  <div class="mdui-container">
-    <div class="mdui-row">
-      
-        <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank"></a>
-      
-      <span>
-        &copy; 2021 - 2021 
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2021
+        <i class="ri-heart-fill heart_icon"></i> xidicunmin
+      </li>
+    </ul>
+    <ul>
+      <li>
         
-          <span style="color:#d9333f" class="iconfont icon-heart"></span>
+      </li>
+    </ul>
+    <ul>
+      <li>
         
-        xidicunmin
-      </span>
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
     </div>
-    <div class="mdui-row">
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="阿冒的仓库"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
       
-        <div class="mdui-col-xs-6 mdui-text-right">
-          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
-        </div>
-        <div class="mdui-col-xs-6 mdui-text-left">
-          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
-        </div>
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
       
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
     </div>
-    <div class="mdui-row">
-      
-        <div class="mdui-col-xs-6 mdui-text-right">
-          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>总访客量 <span id="busuanzi_value_site_uv"></span></span>
-        </div>
-        <div class="mdui-col-xs-6 mdui-text-left">
-          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>总访问量 <span id="busuanzi_value_site_pv"></span></span>
-        </div>
-      
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
     </div>
- </div>
-</footer>
-  
-  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
-  
-  
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
 
-    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- Tocbot -->
 
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
 
+<script src="/dist/main.js"></script>
 
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
 
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+ 
+<script src="/js/clickLove.js"></script>
+ 
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
 
 
     
-<script src="/js/mdui.min.v1.0.0.js"></script>
+    
 
-
-
-
-<script src="/js/meadow.js"></script>
-
+  </div>
 </body>
-</html >
+
+</html>

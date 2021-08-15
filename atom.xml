@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>阿冒的仓库</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2021-08-15T04:03:14.226Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>xidicunmin</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>jsDelivr+Github搭建个人免费CDN</title>
+    <link href="http://example.com/2021/08/15/jsDelivr+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%85%8D%E8%B4%B9CDN/"/>
+    <id>http://example.com/2021/08/15/jsDelivr+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%85%8D%E8%B4%B9CDN/</id>
+    <published>2021-08-15T04:00:00.000Z</published>
+    <updated>2021-08-15T04:03:14.226Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;CDN的全称是Content Delivery Network，中文翻译过来为内容分发网络。主要原理是依靠部署在各地的服务器，通过中心平台的调度，使得用户能够就近获取所需内容，降低网络拥堵，提高访问速度。详情可以自行搜索。&lt;/p&gt;
+&lt;p&gt;通过jsDelivr提供的CDN服务，我们可以在网络上快速访问Github上托管的内容。那么也就说明我们可以在GitHub上建个仓库，用于存放类似于博客图片之内的内容，再通过jsDelivr进行获取，提高博客整体加载速度，那么接下来看看具体怎么实现。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="搭建博客" scheme="http://example.com/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="jsDelivr" scheme="http://example.com/tags/jsDelivr/"/>
+    
+    <category term="CDN" scheme="http://example.com/tags/CDN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CopyMemory使用</title>
+    <link href="http://example.com/2021/08/15/CopyMemory%E4%BD%BF%E7%94%A8/"/>
+    <id>http://example.com/2021/08/15/CopyMemory%E4%BD%BF%E7%94%A8/</id>
+    <published>2021-08-15T03:35:00.000Z</published>
+    <updated>2021-08-15T04:26:12.208Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;首先需要导入win32API：&lt;/p&gt;
+&lt;p&gt;[DllImport(“kernel32.dll”)]&lt;/p&gt;
+&lt;p&gt;然后声明CopyMemory的方法：&lt;/p&gt;
+&lt;p&gt;public static extern void CopyMemory(byte[]</summary>
+        
+      
+    
+    
+    
+    <category term="C#" scheme="http://example.com/categories/C/"/>
+    
+    
+    <category term="CopyMemory" scheme="http://example.com/tags/CopyMemory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>halcon中Hobject转bitmap</title>
+    <link href="http://example.com/2021/08/15/halcon%E4%B8%ADHobject%E8%BD%ACbitmap/"/>
+    <id>http://example.com/2021/08/15/halcon%E4%B8%ADHobject%E8%BD%ACbitmap/</id>
+    <published>2021-08-15T03:35:00.000Z</published>
+    <updated>2021-08-15T03:45:31.594Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight csharp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="halcon" scheme="http://example.com/categories/halcon/"/>
+    
+    
+    <category term="halcon" scheme="http://example.com/tags/halcon/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>三角函数</title>
+    <link href="http://example.com/2021/08/15/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/"/>
+    <id>http://example.com/2021/08/15/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/</id>
+    <published>2021-08-15T03:35:00.000Z</published>
+    <updated>2021-08-15T04:26:50.884Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;sin=对边/斜边&lt;/p&gt;
+&lt;p&gt;cos=邻边/斜边&lt;/p&gt;
+&lt;p&gt;tan=对边/邻边&lt;/p&gt;
+&lt;p&gt;cot=邻边/对边&lt;/p&gt;
+&lt;p&gt;sec=斜边/邻边&lt;/p&gt;
+&lt;p&gt;csc=斜边/对边&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="机器视觉" scheme="http://example.com/categories/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/"/>
+    
+    
+    <category term="三角函数" scheme="http://example.com/tags/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>旋转坐标计算</title>
+    <link href="http://example.com/2021/08/15/%E6%97%8B%E8%BD%AC%E5%9D%90%E6%A0%87%E8%AE%A1%E7%AE%97/"/>
+    <id>http://example.com/2021/08/15/%E6%97%8B%E8%BD%AC%E5%9D%90%E6%A0%87%E8%AE%A1%E7%AE%97/</id>
+    <published>2021-08-15T03:35:00.000Z</published>
+    <updated>2021-08-15T04:27:37.068Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;(x,y)为要转的点，（pointx,pointy)为中心点，如果顺时针角度为angle&lt;/p&gt;
+&lt;p&gt;srx = (x-pointx)*cos(angle) + (y-pointy)*sin(angle)+pointx&lt;/p&gt;
+&lt;p&gt;sry =</summary>
+        
+      
+    
+    
+    
+    <category term="机器视觉" scheme="http://example.com/categories/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/"/>
+    
+    
+    <category term="三角函数" scheme="http://example.com/tags/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/"/>
+    
+    <category term="旋转中心" scheme="http://example.com/tags/%E6%97%8B%E8%BD%AC%E4%B8%AD%E5%BF%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>旋转中心异常</title>
+    <link href="http://example.com/2021/08/15/%E6%97%8B%E8%BD%AC%E4%B8%AD%E5%BF%83%E5%BC%82%E5%B8%B8/"/>
+    <id>http://example.com/2021/08/15/%E6%97%8B%E8%BD%AC%E4%B8%AD%E5%BF%83%E5%BC%82%E5%B8%B8/</id>
+    <published>2021-08-15T03:35:00.000Z</published>
+    <updated>2021-08-15T04:27:20.362Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;现象&quot;&gt;&lt;a href=&quot;#现象&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="机器视觉" scheme="http://example.com/categories/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/"/>
+    
+    
+    <category term="三角函数" scheme="http://example.com/tags/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/"/>
+    
+    <category term="旋转中心" scheme="http://example.com/tags/%E6%97%8B%E8%BD%AC%E4%B8%AD%E5%BF%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>访问修饰符</title>
+    <link href="http://example.com/2021/08/15/%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6/"/>
+    <id>http://example.com/2021/08/15/%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6/</id>
+    <published>2021-08-15T03:35:00.000Z</published>
+    <updated>2021-08-15T03:37:18.077Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;pubilc&quot;&gt;&lt;a href=&quot;#pubilc&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="C#" scheme="http://example.com/categories/C/"/>
+    
+    
+    <category term="C#" scheme="http://example.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo设置主页置顶文章</title>
+    <link href="http://example.com/2021/06/22/Hexo%E8%AE%BE%E7%BD%AE%E4%B8%BB%E9%A1%B5%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0/"/>
+    <id>http://example.com/2021/06/22/Hexo%E8%AE%BE%E7%BD%AE%E4%B8%BB%E9%A1%B5%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0/</id>
+    <published>2021-06-22T11:30:00.000Z</published>
+    <updated>2021-07-14T15:58:02.126Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;按照操作来，就可以把想要的文章置顶！&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="搭建博客" scheme="http://example.com/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="hexo" scheme="http://example.com/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/hexo/"/>
+    
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo发布文章流程</title>
+    <link href="http://example.com/2021/06/22/Hexo%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0%E6%B5%81%E7%A8%8B/"/>
+    <id>http://example.com/2021/06/22/Hexo%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0%E6%B5%81%E7%A8%8B/</id>
+    <published>2021-06-22T09:20:00.000Z</published>
+    <updated>2021-07-11T15:39:50.587Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;博客站点搭建好后，接下来就需要用文章使其变得充实。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="搭建博客" scheme="http://example.com/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="hexo" scheme="http://example.com/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/hexo/"/>
+    
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo常用指令</title>
+    <link href="http://example.com/2021/06/12/Hexo%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
+    <id>http://example.com/2021/06/12/Hexo%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</id>
+    <published>2021-06-12T11:20:00.000Z</published>
+    <updated>2021-06-12T11:16:10.449Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;如果需要持续维护更新用Hexo创建好的博客网站，常见的Hexo指令是必须要了解熟悉的。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="搭建博客" scheme="http://example.com/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="hexo" scheme="http://example.com/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/hexo/"/>
+    
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>迁移hexo博客项目（window）</title>
+    <link href="http://example.com/2021/06/08/%E8%BF%81%E7%A7%BBhexo%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE%EF%BC%88widows%EF%BC%89/"/>
+    <id>http://example.com/2021/06/08/%E8%BF%81%E7%A7%BBhexo%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE%EF%BC%88widows%EF%BC%89/</id>
+    <published>2021-06-08T15:32:00.000Z</published>
+    <updated>2021-06-08T15:32:24.594Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最早我的hexo博客环境是搭建在工作笔记本上，后来想说这毕竟是公司的电脑，于是就想在自己电脑也搭建一套环境。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="搭建博客" scheme="http://example.com/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="hexo" scheme="http://example.com/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/hexo/"/>
+    
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Basler相机问题记录</title>
+    <link href="http://example.com/2021/06/05/Basler%E7%9B%B8%E6%9C%BA%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>http://example.com/2021/06/05/Basler%E7%9B%B8%E6%9C%BA%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
+    <published>2021-06-05T12:10:00.000Z</published>
+    <updated>2021-06-22T08:20:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;硬件触发相机无反馈&quot;&gt;&lt;a href=&quot;#硬件触发相机无反馈&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="工业相机" scheme="http://example.com/categories/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/"/>
+    
+    <category term="Basler" scheme="http://example.com/categories/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/Basler/"/>
+    
+    
+    <category term="Basler" scheme="http://example.com/tags/Basler/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>视觉软件偶然性卡顿问题解决记录</title>
+    <link href="http://example.com/2021/06/05/%E8%A7%86%E8%A7%89%E8%BD%AF%E4%BB%B6%E5%81%B6%E7%84%B6%E6%80%A7%E5%8D%A1%E9%A1%BF%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/"/>
+    <id>http://example.com/2021/06/05/%E8%A7%86%E8%A7%89%E8%BD%AF%E4%BB%B6%E5%81%B6%E7%84%B6%E6%80%A7%E5%8D%A1%E9%A1%BF%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/</id>
+    <published>2021-06-05T12:10:00.000Z</published>
+    <updated>2021-06-07T13:22:58.189Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;软件现象&quot;&gt;&lt;a href=&quot;#软件现象&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="C#" scheme="http://example.com/categories/C/"/>
+    
+    <category term="机器视觉" scheme="http://example.com/categories/C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/"/>
+    
+    
+    <category term="机器视觉" scheme="http://example.com/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pylon软件安装以及连接相机</title>
+    <link href="http://example.com/2021/06/03/Pylon%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E8%BF%9E%E6%8E%A5%E7%9B%B8%E6%9C%BA/"/>
+    <id>http://example.com/2021/06/03/Pylon%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E8%BF%9E%E6%8E%A5%E7%9B%B8%E6%9C%BA/</id>
+    <published>2021-06-03T12:02:30.000Z</published>
+    <updated>2021-06-07T13:22:58.189Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;安装软件&quot;&gt;&lt;a href=&quot;#安装软件&quot; class=&quot;headerlink&quot; title=&quot;安装软件&quot;&gt;&lt;/a&gt;安装软件&lt;/h2&gt;&lt;p&gt;双击打开pylon安装包，按照下图顺序进行安装：&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="工业相机" scheme="http://example.com/categories/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/"/>
+    
+    <category term="Basler" scheme="http://example.com/categories/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/Basler/"/>
+    
+    
+    <category term="Basler" scheme="http://example.com/tags/Basler/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Basler相机硬件触发设置</title>
+    <link href="http://example.com/2021/06/02/Basler%E7%9B%B8%E6%9C%BA%E7%A1%AC%E4%BB%B6%E8%A7%A6%E5%8F%91%E8%AE%BE%E7%BD%AE/"/>
+    <id>http://example.com/2021/06/02/Basler%E7%9B%B8%E6%9C%BA%E7%A1%AC%E4%BB%B6%E8%A7%A6%E5%8F%91%E8%AE%BE%E7%BD%AE/</id>
+    <published>2021-06-02T11:13:02.000Z</published>
+    <updated>2021-06-16T06:50:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;很多项目为了节省时序都应用上硬件触发，最近正好有项目涉及到这方面，正好借此机会记录一下。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="工业相机" scheme="http://example.com/categories/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/"/>
+    
+    <category term="Basler" scheme="http://example.com/categories/%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA/Basler/"/>
+    
+    
+    <category term="Basler" scheme="http://example.com/tags/Basler/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo更换主题</title>
+    <link href="http://example.com/2021/06/01/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/"/>
+    <id>http://example.com/2021/06/01/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/</id>
+    <published>2021-06-01T14:47:31.000Z</published>
+    <updated>2021-06-07T13:22:58.177Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;初始主题说实话真是不大行，有必要更换一套主题，提升下整体逼格。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="搭建博客" scheme="http://example.com/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="hexo" scheme="http://example.com/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/hexo/"/>
+    
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GitHub搭配Hexo生成个人博客</title>
+    <link href="http://example.com/2021/05/31/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://example.com/2021/05/31/GitHub%E6%90%AD%E9%85%8DHexo%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
+    <published>2021-05-31T01:42:19.000Z</published>
+    <updated>2021-08-15T15:51:12.025Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;通过GitHub和Hexo来搭建自己的第一个博客吧！&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="搭建博客" scheme="http://example.com/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="hexo" scheme="http://example.com/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/hexo/"/>
+    
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+    <category term="置顶" scheme="http://example.com/tags/%E7%BD%AE%E9%A1%B6/"/>
+    
+  </entry>
+  
+</feed>
